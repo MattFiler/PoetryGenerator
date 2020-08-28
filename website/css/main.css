@@ -1,0 +1,137 @@
+/*
+Artstation2020: CSS for the frontend and backend.
+*/
+
+body {
+    overflow-x: hidden;
+}
+.container {
+    margin-top: 20px;
+    z-index: 0;
+}
+.error_text, .error_text_words {
+    color: red;
+    font-weight: bold;
+    word-break: break-all;
+}
+.output_image {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 2px;
+    border:solid 2px;
+    border-bottom-color:#ffe;
+    border-left-color:#eed;
+    border-right-color:#d0d0d0;
+    border-top-color:#d0d0d0;
+}
+.output_poem {
+    font-family: 'Bree Serif', serif;
+}
+.output_poem > p {
+    margin-top:0;
+    margin-bottom:0;
+}
+.step_2, .step_3, .step_4, .output_sound {
+    display: none;
+}
+.character_button {
+    width: 100%;
+}
+.character_button > p {
+    white-space: initial;
+}
+.continue_button {
+    float:right;
+}
+.postcard_side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.share_buttons {
+    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: -37px;
+}
+.image_upload, .submit_btn {
+    cursor:pointer;
+}
+.character_profilepic {
+    background: white;
+    border-radius:60px;
+    width: 120px;
+    height: 120px;
+}
+.thinking_text {
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 991px) {
+    .output_image {
+        margin-bottom: 20px;
+    }
+    .share_buttons {
+        position: unset;
+        float:none;
+    }
+}
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    float: right;
+    position: absolute;
+    top:0;right:0;
+    z-index:9999;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #363636;
+    border-color: #363636 transparent #363636 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.frame {
+    background-color:#f7f7f7;
+    border:solid 5vmin #eee;
+    border-bottom-color:#fff;
+    border-left-color:#eee;
+    border-radius:2px;
+    border-right-color:#eee;
+    border-top-color:#ddd;
+    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+    box-sizing:border-box;
+    &:before {
+        border-radius:2px;
+        bottom:-2vmin;
+        box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+        content:"";
+        left:-2vmin;
+        position:absolute;
+        right:-2vmin;
+        top:-2vmin;
+    }
+    &:after {
+        border-radius:2px;
+        bottom:-2.5vmin;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+        content:"";
+        left:-2.5vmin;
+        position:absolute;
+        right:-2.5vmin;
+        top:-2.5vmin;
+    }
+}
